@@ -3,10 +3,12 @@ package com.example.ott.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ott.R
 import com.example.ott.databinding.OuterRcItemViewBinding
 import com.example.ott.temp_data.outterList
+import com.example.ott.ui.HomeFragment
 
 class OutterAdapter(val list: List<outterList>): RecyclerView.Adapter<OutterAdapter.OuterViewHolder>() {
 
@@ -25,6 +27,9 @@ class OutterAdapter(val list: List<outterList>): RecyclerView.Adapter<OutterAdap
         holder.title.text = list[position].title
         val adapter = InnerAdapter(list[position].movies)
         holder.inner_rc.adapter = adapter
+
+
+        
     }
 
     override fun getItemCount(): Int {
