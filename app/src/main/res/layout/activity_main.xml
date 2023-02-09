@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
     android:background="@color/background"
     tools:context=".activity.MainActivity">
 
     <fragment
-        android:layout_marginTop="25dp"
         android:layout_above="@id/bottom_navBar"
         android:id="@+id/nav_host_fragment_container"
         android:name="androidx.navigation.fragment.NavHostFragment"

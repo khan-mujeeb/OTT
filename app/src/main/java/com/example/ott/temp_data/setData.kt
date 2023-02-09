@@ -1,5 +1,7 @@
 package com.example.netflixuiclone.data
 
+import com.example.ott.temp_data.outterList
+
 object setData {
     fun movieList(): List<MovieData> {
         var list = mutableListOf<MovieData>()
@@ -138,5 +140,17 @@ object setData {
 
 
         return list
+    }
+
+    fun getOuterList(): List<outterList> {
+        val movieList = movieList()
+        var list2 = mutableListOf<outterList>()
+
+        list2.add(outterList("My List", movieList))
+        list2.add(outterList("Action", movieList))
+        list2.add(outterList("Comedy", movieList))
+        list2.add(outterList("Random", movieList))
+
+        return list2
     }
 }
