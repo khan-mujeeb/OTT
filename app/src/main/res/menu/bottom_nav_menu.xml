@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:icon="@drawable/group"
         android:id="@+id/homeFragment"
         android:title="home" />
 
     <item
+        android:icon="@drawable/play__library__playlist"
         android:id="@+id/downloadFragment"
         android:title="download"/>
 
     <item
+        android:icon="@drawable/ic_baseline_search_24"
         android:id="@+id/searchFragment"
         android:title="search"/>
 
     <item
+        android:icon="@drawable/ic_baseline_favorite_border_24"
         android:id="@+id/favoriteFragment"
         android:title="favorite"/>
 
     <item
+        android:icon="@drawable/single_user"
         android:id="@+id/profileFragment"
         android:title="profile"/>
 </menu>
