@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ConcatAdapter
 import com.bumptech.glide.Glide
 import com.example.netflixuiclone.data.setData
 import com.example.netflixuiclone.data.setData.getOuterList
 import com.example.netflixuiclone.data.setData.movieList
 import com.example.ott.R
+import com.example.ott.adapter.HeaderAdapter
 import com.example.ott.adapter.InnerAdapter
 import com.example.ott.adapter.OutterAdapter
 import com.example.ott.databinding.FragmentHomeBinding
@@ -24,27 +26,29 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(layoutInflater)
 
 
-        setMovieData()
+//        setMovieData()
         setRc()
 
         // Inflate the layout for this fragment
         return binding!!.root
     }
 
-    private fun setMovieData() {
-        val list = movieList()
-        Glide.with(this)
-            .load(list[1].url)
-            .into(binding!!.headerImg)
-
-        binding!!.title.text = list[1].name
-        binding!!.genre.text = list[1].generic
-    }
+//    private fun setMovieData() {
+//        val list = movieList()
+//        Glide.with(this)
+//            .load(list[1].url)
+//            .into(binding!!.headerImg)
+//
+//        binding!!.title.text = list[1].name
+//        binding!!.genre.text = list[1].generic
+//    }
 
     private fun setRc() {
+        val headerAdapter = HeaderAdapter()
         val list2 = getOuterList()
         val adapter = OutterAdapter(list2)
-        binding!!.outerRc.adapter = adapter
+        val concatAdapter = ConcatAdapter(headerAdapter, adapter)
+        binding!!.outerRc.adapter = concatAdapter
     }
 
     override fun onDestroy() {

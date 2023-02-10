@@ -7,16 +7,18 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ott.R
 import com.example.ott.databinding.OuterRcItemViewBinding
+import com.example.ott.databinding.TempBinding
 import com.example.ott.temp_data.outterList
 import com.example.ott.ui.HomeFragment
 
 class OutterAdapter(val list: List<outterList>): RecyclerView.Adapter<OutterAdapter.OuterViewHolder>() {
 
-    class OuterViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+     class OuterViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val binding =  OuterRcItemViewBinding.bind(itemView)
         val title = binding.categoryTitle
         val inner_rc = binding.innerRc
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OuterViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.outer_rc_item_view, parent,false)

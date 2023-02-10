@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,28 +8,37 @@
     android:orientation="vertical"
     tools:context=".ui.HomeFragment">
 
-    <RelativeLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginBottom="5dp"
+        android:id="@+id/outer_rc"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="6.5">
+        tools:layout_marginTop="-212dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/outer_rc_item_view" />
 
-        <ImageView
-            android:id="@+id/header_img"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher_round" />
+
+    <com.google.android.material.appbar.AppBarLayout
+
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
 
         <LinearLayout
+            android:background="@android:color/transparent"
             android:id="@+id/top_search_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="15dp"
-            android:elevation="50dp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
+            app:layout_scrollFlags="scroll|enterAlways"
             android:padding="10dp">
 
             <ImageView
@@ -43,7 +51,6 @@
                 android:src="@drawable/group" />
 
             <com.google.android.material.textfield.TextInputEditText
-
                 android:id="@+id/search_editText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -71,95 +78,55 @@
         </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/genre"
-            android:text=""
-            android:textAlignment="center"
-            android:textSize="36sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/genre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/bottom_tool_kit"
-            android:layout_margin="20dp"
-            android:text=""
-            android:textAlignment="center"
-            android:textSize="16sp" />
-
-
         <LinearLayout
-            android:id="@+id/bottom_tool_kit"
+            android:background="@android:color/transparent"
+            android:id="@+id/stickbar_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="5dp"
+            android:layout_height="?actionBarSize"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:paddingHorizontal="16dp"
+            app:layout_scrollFlags="noScroll">
 
-            <LinearLayout
-                android:id="@+id/mylist"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/tv_shows_tv"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_weight="1"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="TV Shows"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_check_24" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/my_list"
-                    android:textColor="@color/white" />
-            </LinearLayout>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/play"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:backgroundTint="@color/white"
-                android:drawableStart="@drawable/ic_baseline_play_arrow_24"
-                android:text="@string/play"
-                android:textColor="@color/black" />
-
-            <LinearLayout
-                android:id="@+id/info"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/movies_tv"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Movies"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_outline_info_24" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/info"
-                    android:textColor="@color/white" />
-            </LinearLayout>
-
+            <TextView
+                android:id="@+id/categories_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Categories"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
         </LinearLayout>
-
-    </RelativeLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/outer_rc"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3.5"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/outer_rc_item_view" />
-</LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

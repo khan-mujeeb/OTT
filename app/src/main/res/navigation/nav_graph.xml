@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_downloadFragment"
             app:destination="@id/downloadFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mediaDetailsFragment"
+            app:destination="@id/mediaDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/downloadFragment"
@@ -50,9 +53,5 @@
         android:id="@+id/mediaDetailsFragment"
         android:name="com.example.ott.ui.MediaDetailsFragment"
         android:label="fragment_media_details"
-        tools:layout="@layout/fragment_media_details" >
-        <action
-            android:id="@+id/action_mediaDetailsFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_media_details" />
 </navigation>
