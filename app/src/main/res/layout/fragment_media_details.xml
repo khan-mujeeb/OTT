@@ -7,111 +7,80 @@
     tools:context=".ui.MediaDetailsFragment"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/header_img"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher_round" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="64dp"
-                android:src="@drawable/frame_99" />
-
-            <ImageView
-                android:id="@+id/dots"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="225dp"
-                android:layout_marginTop="64dp"
-                android:src="@drawable/frame_100" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="366dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="300dp"
-            android:text=""
-            android:textAlignment="center"
-            android:textSize="36sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/genre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="360dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:text=""
-            android:textAlignment="center"
-            android:textSize="16sp" />
-
-    </RelativeLayout>
-
-
-
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingHorizontal="0dp">
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                android:id="@+id/header_img"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher_round" />
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:src="@drawable/frame_99" />
+
+                <ImageView
+                    android:id="@+id/dots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="225dp"
+                    android:src="@drawable/frame_100" />
+            </RelativeLayout>
 
             <TextView
-                android:id="@+id/episode_name"
-                android:layout_width="match_parent"
+                android:id="@+id/title"
+                android:layout_width="366dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:text="Chapter one"
-                android:fontFamily="@font/poppins_medium"/>
-
-            <ProgressBar
-                android:id="@+id/progressBar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:progress="50"
-                android:layout_width="match_parent"
-                android:progressTint="@color/mid_nav"
-                android:layout_height="wrap_content"
-                />
-            <ImageView
-                android:id="@+id/continue_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:src="@drawable/resource_continue"/>
+                android:layout_marginTop="200dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="36sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/cast"
-                android:layout_width="65dp"
-                android:layout_height="17dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="The Cast" />
+                android:id="@+id/genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="400dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="16sp" />
 
+            <TextView
+                android:id="@+id/name_of_episode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="chapter one"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="460dp"/>
         </LinearLayout>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>
