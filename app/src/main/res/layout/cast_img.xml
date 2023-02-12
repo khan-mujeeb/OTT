@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:id="@+id/cast_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/round"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher_round" />
+
+</LinearLayout>
