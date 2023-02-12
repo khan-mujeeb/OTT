@@ -11,4 +11,6 @@
     <color name="start_nav">#6D1818</color>
     <color name="mid_nav">#461414</color>
     <color name="end_nav">#261111</color>
+    <color name="black_transparent">#BF000000</color>
+    <color name="transparent">#00000000</color>
 </resources>

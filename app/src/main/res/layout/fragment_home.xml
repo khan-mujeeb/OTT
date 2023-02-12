@@ -35,12 +35,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="25dp"
             android:layout_marginBottom="15dp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            app:layout_scrollFlags="scroll|enterAlways"
-            android:padding="10dp">
+            android:paddingTop="30dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="20dp">
 
             <ImageView
                 android:id="@+id/icon"
@@ -101,7 +102,7 @@
                 android:text="TV Shows"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:fontFamily="@font/poppins_medium"
@@ -115,7 +116,7 @@
                 android:text="Movies"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:fontFamily="@font/poppins_medium"
@@ -129,7 +130,7 @@
                 android:text="Categories"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,11 +1,14 @@
 package com.example.ott.ui
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ConcatAdapter
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.netflixuiclone.data.setData
 import com.example.netflixuiclone.data.setData.getOuterList
@@ -49,6 +52,19 @@ class HomeFragment : Fragment() {
         val adapter = OutterAdapter(list2)
         val concatAdapter = ConcatAdapter(headerAdapter, adapter)
         binding!!.outerRc.adapter = concatAdapter
+
+        binding!!.outerRc.addOnScrollListener(object: RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+                if (dy>0) {
+                    binding!!.stickbarLayout.visibility = View.INVISIBLE
+                    binding!!.topSearchLayout.background = ContextCompat.getDrawable(requireContext(), R.color.black_transparent)
+                }else {
+                    binding!!.stickbarLayout.visibility = View.VISIBLE
+                    binding!!.topSearchLayout.background = ContextCompat.getDrawable(requireContext(), R.color.transparent)
+                }
+            }
+        })
     }
 
     override fun onDestroy() {
