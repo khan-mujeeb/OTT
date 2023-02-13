@@ -16,4 +16,13 @@
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
     </style>
+    <style name="TabLayoutTheme" parent="@style/Theme.OTT">
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="TabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
