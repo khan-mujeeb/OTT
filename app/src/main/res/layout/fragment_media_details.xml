@@ -152,63 +152,21 @@
                 android:src="@drawable/frame_90"/>
 
             <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tab_layout"
+                app:tabTextColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tabs"
+                app:tabIndicatorColor="@color/mid_nav"
+                app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+                app:tabIndicatorAnimationDuration="@integer/material_motion_duration_medium_2"
+                app:tabIndicatorHeight="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/black"
-                android:layout_marginTop="10dp"
-                android:theme="@style/TabLayoutTheme"
-                android:visibility="visible"
-                app:tabIndicatorFullWidth="false"
-                app:tabIndicatorGravity="top"
-                app:tabIndicatorHeight="4dp"
-                app:tabMode="scrollable"
-                app:tabSelectedTextColor="@color/text_primary"
-                app:tabTextAppearance="@style/TabText"
-                app:tabTextColor="@color/text_secondary">
-
-<!--                <com.google.android.material.tabs.TabItem-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="MORE LIKE THIS" />-->
-
-<!--                <com.google.android.material.tabs.TabItem-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="TRAILERS &amp; MORE" />-->
-
-            </com.google.android.material.tabs.TabLayout>
-
-
-            <TextView
-                android:id="@+id/show_name"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"
-                android:text="Show Name"
-                android:fontFamily="@font/poppins_medium"
-                android:textColor="@color/white"
-                android:layout_width="100dp"
                 android:layout_height="wrap_content"/>
-
-            <ImageView
-                android:id="@+id/down_arrow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="-24dp"
-                android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/episode_list"
+            <androidx.viewpager.widget.ViewPager
+                android:layout_below="@id/tabs"
+                android:id="@+id/viewPager"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
-                android:orientation="vertical"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/video_rc_view" />
-
-
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                android:layout_height="1000dp"/>
         </LinearLayout>
 
 

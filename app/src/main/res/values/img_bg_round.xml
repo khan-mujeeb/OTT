@@ -3,4 +3,7 @@
     <style name="image_style">
         <item name="cornerSize">5dp</item>
     </style>
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">12sp</item>
+    </style>
 </resources>
