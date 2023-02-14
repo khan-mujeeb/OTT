@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
     </style>
     <style name="TabLayoutTheme" parent="@style/Theme.OTT">
         <item name="android:singleLine">true</item>

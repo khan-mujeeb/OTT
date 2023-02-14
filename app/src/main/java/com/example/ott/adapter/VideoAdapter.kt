@@ -9,18 +9,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.netflixuiclone.data.MovieData
 import com.example.ott.R
-import com.example.ott.databinding.CastImgBinding
+import com.example.ott.databinding.VideoRcViewBinding
 import com.example.ott.ui.HomeFragment
 
-class CastAdapter(val list: List<MovieData>): RecyclerView.Adapter<CastAdapter.InnerViewHolder>() {
+class VideoAdapter(val list: List<MovieData>): RecyclerView.Adapter<VideoAdapter.InnerViewHolder>() {
 
     class InnerViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val binding =  CastImgBinding.bind(itemView)
-        val img = binding.castImg
+        val binding = VideoRcViewBinding.bind(itemView)
+        val img = binding.videoImg
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InnerViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.cast_img, parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.video_rc_view, parent,false)
         return InnerViewHolder(view)
     }
 
