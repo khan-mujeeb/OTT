@@ -1,5 +1,8 @@
 package com.example.ott.adapter
 
+import android.app.Activity
+import android.app.ActivityOptions
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.netflixuiclone.data.MovieData
 import com.example.ott.R
+import com.example.ott.activity.DetailsActivity
 import com.example.ott.databinding.InnerRcItemViewBinding
 import com.example.ott.ui.HomeFragment
 import com.example.ott.ui.HomeFragmentDirections
@@ -33,6 +37,10 @@ class InnerAdapter(val list: List<MovieData>): RecyclerView.Adapter<InnerAdapter
             .into(holder.img)
 
         holder.itemView.setOnClickListener {
+            val context = holder.itemView.context as Activity?
+//            val option: ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(context, holder.itemView, "sharedName")
+//
+//            holder.itemView.context.startActivity(Intent(context, DetailsActivity::class.java), option.toBundle())
             Navigation.findNavController(it).navigate(
                 HomeFragmentDirections.actionHomeFragmentToMediaDetailsFragment()
 

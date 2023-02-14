@@ -1,21 +1,16 @@
 package com.example.ott.ui
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.example.netflixuiclone.data.setData
 import com.example.netflixuiclone.data.setData.getOuterList
-import com.example.netflixuiclone.data.setData.movieList
 import com.example.ott.R
 import com.example.ott.adapter.HeaderAdapter
-import com.example.ott.adapter.InnerAdapter
 import com.example.ott.adapter.OutterAdapter
 import com.example.ott.databinding.FragmentHomeBinding
 
@@ -57,8 +52,11 @@ class HomeFragment : Fragment() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
                 if (dy>0) {
-                    binding!!.stickbarLayout.visibility = View.INVISIBLE
+
+                    binding!!.stickbarLayout.setVisibility(View.INVISIBLE)
                     binding!!.topSearchLayout.background = ContextCompat.getDrawable(requireContext(), R.color.black_transparent)
+
+
                 }else {
                     binding!!.stickbarLayout.visibility = View.VISIBLE
                     binding!!.topSearchLayout.background = ContextCompat.getDrawable(requireContext(), R.color.transparent)

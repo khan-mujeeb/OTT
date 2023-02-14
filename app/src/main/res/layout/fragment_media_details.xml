@@ -29,21 +29,25 @@
                 android:scaleType="centerCrop"
                 android:src="@mipmap/ic_launcher_round" />
 
-                <ImageView
+                <include
+                    android:layout_marginTop="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/back"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="66dp"
-                    android:src="@drawable/frame_99" />
+                    layout="@layout/back" />
 
-                <ImageView
-                    android:id="@+id/dots"
-                    android:layout_width="wrap_content"
+                <include
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="290dp"
-                    android:layout_marginTop="66dp"
-                    android:src="@drawable/frame_100" />
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/dots"
+                    layout="@layout/dots" />
             </RelativeLayout>
 
             <TextView
