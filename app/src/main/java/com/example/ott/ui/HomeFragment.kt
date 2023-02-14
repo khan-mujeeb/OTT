@@ -23,7 +23,6 @@ class HomeFragment : Fragment() {
     ): View? {
         binding = FragmentHomeBinding.inflate(layoutInflater)
 
-
 //        setMovieData()
         setRc()
 
@@ -71,6 +70,8 @@ class HomeFragment : Fragment() {
             binding = null
         }
     }
+
+
 
 
 }

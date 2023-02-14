@@ -48,6 +48,8 @@ class InnerAdapter(val list: List<MovieData>): RecyclerView.Adapter<InnerAdapter
         }
     }
 
+
+
     override fun getItemCount(): Int {
         return list.size
     }
