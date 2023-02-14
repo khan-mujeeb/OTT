@@ -53,8 +53,6 @@ class MediaDetailsFragment : Fragment() {
 
         val fragmentList = ArrayList<Fragment>()
         fragmentList.add(EpisodeFragment())
-        fragmentList.add(CollectionFragment())
-        fragmentList.add(MoreFragment())
         fragmentList.add(TrailersFragment())
 
 
