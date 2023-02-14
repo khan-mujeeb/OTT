@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.netflixuiclone.data.setData.movieList
 import com.example.ott.R
-import com.example.ott.databinding.TempBinding
 
 class HeaderAdapter(): RecyclerView.Adapter<HeaderAdapter.HeaderViewHolder>() {
     class HeaderViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
@@ -18,7 +17,7 @@ class HeaderAdapter(): RecyclerView.Adapter<HeaderAdapter.HeaderViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeaderViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(
-                R.layout.temp,
+                R.layout.header_item_view,
                 parent,
                 false
             )
