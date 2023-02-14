@@ -11,6 +11,8 @@ import com.example.netflixuiclone.data.MovieData
 import com.example.ott.R
 import com.example.ott.databinding.CastImgBinding
 import com.example.ott.ui.HomeFragment
+import com.example.ott.ui.HomeFragmentDirections
+import com.example.ott.ui.MediaDetailsFragmentDirections
 
 class CastAdapter(val list: List<MovieData>): RecyclerView.Adapter<CastAdapter.InnerViewHolder>() {
 
@@ -29,6 +31,12 @@ class CastAdapter(val list: List<MovieData>): RecyclerView.Adapter<CastAdapter.I
         Glide.with(holder.itemView.context)
             .load(list[position].url)
             .into(holder.img)
+
+        holder.itemView.setOnClickListener {
+            Navigation.findNavController(it).navigate(
+                MediaDetailsFragmentDirections.actionMediaDetailsFragmentToCastDetailFragment()
+            )
+        }
 
     }
 

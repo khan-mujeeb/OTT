@@ -7,131 +7,320 @@
     android:orientation="vertical"
     tools:context=".ui.CastDetailFragment">
 
-    <RelativeLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="500dp">
-        <ImageView
-            android:layout_alignParentTop="true"
-            android:id="@+id/cast_header_img"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-
-        <include
-            android:layout_marginTop="50dp"
-            android:layout_marginStart="20dp"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/back"
-            layout="@layout/back" />
-
-        <include
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="20dp"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/dots"
-            layout="@layout/dots" />
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:transitionName="sharedName"
-            android:id="@+id/cast_profile_img"
-            android:layout_width="130dp"
-            android:layout_height="200dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            app:shapeAppearanceOverlay="@style/image_style"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher_round" />
-
-        <TextView
-            android:textSize="20sp"
-            android:text="Name of Actor"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_above="@id/age"
-            android:layout_toEndOf="@id/cast_profile_img"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:fontFamily="@font/poppins_medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/age"
-            android:text="Age"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_above="@id/cast_info"
-            android:layout_toEndOf="@id/cast_profile_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/cast_info"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="15dp"
-            android:layout_above="@id/rating_layout"
-            android:layout_toEndOf="@id/cast_profile_img"
-            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
+        android:layout_height="match_parent">
         <LinearLayout
-            android:id="@+id/rating_layout"
-            android:gravity="center"
-            android:layout_margin="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp">
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/cast_header_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
 
-            android:layout_toEndOf="@id/cast_profile_img"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/one"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_outline_star_border_24"/>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_outline_star_border_24"/>
+                <include
+                    android:layout_marginTop="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/back"
+                    layout="@layout/back" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_outline_star_border_24"/>
+                <include
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/dots"
+                    layout="@layout/dots" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_outline_star_border_24"/>
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:transitionName="sharedName"
+                    android:id="@+id/cast_profile_img"
+                    android:elevation="20dp"
+                    android:layout_width="110dp"
+                    android:layout_height="160dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:shapeAppearanceOverlay="@style/image_style"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher_round" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_outline_star_border_24"/>
+                <TextView
 
-            <TextView
-                android:textSize="18sp"
-                android:id="@+id/rating"
-                android:layout_marginStart="10dp"
-                android:text="9.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                    android:textSize="16sp"
+                    android:text="Name of Actor"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_above="@id/age"
+                    android:gravity="center"
+                    android:layout_toEndOf="@id/cast_profile_img"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/age"
+                    android:text="Age"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_above="@id/cast_info"
+                    android:layout_toEndOf="@id/cast_profile_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/cast_info"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="4"
+                    android:textSize="13sp"
+                    android:textColor="@color/description_text"
+                    android:layout_above="@id/rating_layout"
+                    android:layout_toEndOf="@id/cast_profile_img"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/rating_layout"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/cast_profile_img"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+
+                        android:id="@+id/one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_outline_star_border_24"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_outline_star_border_24"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_outline_star_border_24"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_outline_star_border_24"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_outline_star_border_24"/>
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:id="@+id/rating"
+                        android:layout_marginStart="10dp"
+                        android:text="9.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <TextView
+                        android:textSize="11.5sp"
+                        android:id="@+id/heading_kfp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:text="Known for: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/description_text"/>
+
+                    <TextView
+                        android:textSize="11.5sp"
+                        android:id="@+id/kfp"
+                        android:text="Performance"
+                        android:layout_toEndOf="@id/heading_kfp"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:textSize="11.5sp"
+                        android:id="@+id/heading_created"
+                        android:layout_below="@id/heading_kfp"
+                        android:layout_alignParentStart="true"
+                        android:text="Credited in: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/description_text"/>
+
+                    <TextView
+                        android:textSize="11.5sp"
+                        android:id="@+id/created"
+                        android:layout_below="@id/kfp"
+                        android:text="23"
+                        android:layout_toEndOf="@id/heading_created"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:textSize="11.5sp"
+                        android:id="@+id/heading_genre"
+                        android:layout_below="@id/heading_created"
+                        android:layout_alignParentStart="true"
+                        android:text="Genre: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/description_text"/>
+
+                    <TextView
+                        android:textSize="11.5sp"
+                        android:layout_below="@id/created"
+                        android:text="Performance"
+                        android:layout_toEndOf="@id/heading_genre"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <TextView
+                        android:textSize="11.5sp"
+                        android:id="@+id/heading_birth"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:text="Birth: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/description_text"/>
+
+                    <TextView
+                        android:textSize="11.5sp"
+                        android:id="@+id/bith"
+                        android:text="18-12-2003"
+                        android:layout_toEndOf="@id/heading_birth"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:textSize="11.5sp"
+                        android:id="@+id/heading_pob"
+                        android:layout_below="@id/heading_birth"
+                        android:layout_alignParentStart="true"
+                        android:text="Place of birth: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/description_text"/>
+
+                    <TextView
+                        android:textSize="11.5sp"
+                        android:id="@+id/pob"
+                        android:layout_below="@id/bith"
+                        android:text="usa"
+                        android:layout_toEndOf="@id/heading_pob"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:textSize="11.5sp"
+                        android:id="@+id/heading_known_as"
+                        android:layout_below="@id/pob"
+                        android:layout_alignParentStart="true"
+                        android:text="Also Known as: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/description_text"/>
+
+                    <TextView
+                        android:textSize="11.5sp"
+                        android:layout_below="@id/pob"
+                        android:text="Iron Man"
+                        android:layout_toEndOf="@id/heading_known_as"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/known_for"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Known for"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+
+                    android:textColor="@color/start_nav"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:text="See all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/known_for_rc"
+                    android:layout_marginBottom="10dp "
+                    android:orientation="horizontal"
+                    tools:listitem="@layout/inner_rc_item_view"
+                    android:layout_below="@id/known_for"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+            </RelativeLayout>
         </LinearLayout>
-
-    </RelativeLayout>
-
-
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>

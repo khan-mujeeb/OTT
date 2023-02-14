@@ -12,14 +12,14 @@
         android:id="@+id/category_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-
+        android:layout_marginTop="18dp"
         android:text="Heading"
         android:fontFamily="@font/poppins_medium"
         android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="5dp"
         android:id="@+id/inner_rc"
         android:orientation="horizontal"
         tools:listitem="@layout/inner_rc_item_view"

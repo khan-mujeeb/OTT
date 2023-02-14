@@ -53,5 +53,14 @@
         android:id="@+id/mediaDetailsFragment"
         android:name="com.example.ott.ui.MediaDetailsFragment"
         android:label="fragment_media_details"
-        tools:layout="@layout/fragment_media_details" />
+        tools:layout="@layout/fragment_media_details" >
+        <action
+            android:id="@+id/action_mediaDetailsFragment_to_castDetailFragment"
+            app:destination="@id/castDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/castDetailFragment"
+        android:name="com.example.ott.ui.CastDetailFragment"
+        android:label="fragment_cast_detail"
+        tools:layout="@layout/fragment_cast_detail" />
 </navigation>
