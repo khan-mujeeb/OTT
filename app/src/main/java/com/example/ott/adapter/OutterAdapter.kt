@@ -7,6 +7,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ott.R
 import com.example.ott.databinding.OuterRcItemViewBinding
+
 import com.example.ott.temp_data.outterList
 import com.example.ott.ui.HomeFragment
 
