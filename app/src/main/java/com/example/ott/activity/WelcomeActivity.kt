@@ -1,12 +1,29 @@
 package com.example.ott.activity
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import com.example.ott.R
+import androidx.appcompat.app.AppCompatActivity
+import com.example.ott.databinding.ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity() {
+    private var binding: ActivityWelcomeBinding? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_welcome)
+        binding = ActivityWelcomeBinding.inflate(layoutInflater)
+        setContentView(binding!!.root)
+
+        binding!!.signup.setOnClickListener {
+            val intent = Intent(this, SignupActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+            startActivity(intent)
+
+        }
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        if (binding!=null) {
+            binding = null
+        }
     }
 }
