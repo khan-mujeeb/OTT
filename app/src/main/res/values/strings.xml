@@ -6,4 +6,8 @@
     <string name="info">Info</string>
     <string name="play">Play</string>
     <string name="my_list">My List</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="save_your_data_watch_offline_on_a_plane_train_or_submarine">Save your data, watch offline on a plane, train, or submarine...</string>
+    <string name="download_and_go">Download and go</string>
 </resources>

@@ -14,6 +14,8 @@
     <color name="mid_nav">#461414</color>
     <color name="end_nav">#261111</color>
     <color name="description_text">#999999</color>
+    <color name="text_red">#FF0E0E</color>
+    <color name="btn_red">#EE1520</color>
     <color name="black_transparent">#BF000000</color>
     <color name="transparent">#00000000</color>
 </resources>
