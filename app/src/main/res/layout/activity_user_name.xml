@@ -1,9 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.UserNameActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/edit_pencil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/vector"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="300dp"/>
+
+    <ImageView
+        android:id="@+id/admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="222dp"
+        android:src="@drawable/admin" />
+
+    <TextView
+        android:id="@+id/admin_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="admin Name"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="315dp"
+        android:textFontWeight="400"
+        android:textSize="13.25dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_medium"/>
+
+    <ImageView
+        android:id="@+id/invitee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="222dp"
+        android:src="@drawable/invitte" />
+
+    <TextView
+        android:id="@+id/invitee_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="invite"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="315dp"
+        android:textFontWeight="400"
+        android:textSize="13.25dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_medium"/>
+
+    <ImageView
+        android:id="@+id/invitee_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="265dp"
+        android:layout_marginTop="319dp"
+        android:src="@drawable/invitee_plus" />
+
+
+</RelativeLayout>

@@ -4,16 +4,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.ott.R
-import com.example.ott.databinding.ActivityUserNameBinding
+import com.example.ott.databinding.ActivityNextBinding
 
-class UserNameActivity : AppCompatActivity() {
-    private var binding: ActivityUserNameBinding? = null
+class NextActivity : AppCompatActivity() {
+    private var binding: ActivityNextBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityUserNameBinding.inflate(layoutInflater)
+        binding = ActivityNextBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
-        binding!!.inviteePlus.setOnClickListener {
-            val intent = Intent(this, InviteActivity::class.java)
+        binding!!.next.setOnClickListener {
+            val intent = Intent(this, UserNameActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             startActivity(intent)
 
