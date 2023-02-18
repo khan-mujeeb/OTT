@@ -45,6 +45,7 @@
         android:layout_marginBottom="10dp"
         android:layout_above="@id/already"
         android:id="@+id/signup"
+        android:fontFamily="@font/poppins_medium"
         android:text="sign up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
