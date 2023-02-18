@@ -12,7 +12,6 @@ class SignupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
-
         binding!!.verify.setOnClickListener {
             startActivity(Intent(this, OtpActivity::class.java))
             finish()
