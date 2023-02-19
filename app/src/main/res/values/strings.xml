@@ -13,4 +13,5 @@
     <string name="enter_your_email">ENTER YOUR EMAIL</string>
     <string name="enter_email_to_invite">ENTER EMAIL TO INVITE</string>
     <string name="verify">Verify</string>
+    <string name="check_your_mail">Check Your Mail</string>
 </resources>
