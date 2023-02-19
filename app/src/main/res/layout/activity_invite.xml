@@ -18,7 +18,7 @@
         android:textSize="15sp"
         android:maxLines="1"
         android:hint="@string/enter_email_to_invite"
-        android:layout_width="355dp"
+        android:layout_width="match_parent"
         android:layout_height="45dp"/>
 
     <Button
@@ -28,7 +28,7 @@
         android:layout_alignParentBottom="true"
         android:backgroundTint="@color/hint_colour"
         android:text="INVITE"
-        android:layout_width="355dp"
+        android:layout_width="match_parent"
         android:layout_height="55dp"/>
 
 
