@@ -7,12 +7,22 @@
     android:padding="10dp"
     tools:context=".activity.OtpActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:layout_above="@id/otp_layout"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"
+        android:text="Check Your Mail"
+        android:fontFamily="@font/poppins_medium"/>
     <LinearLayout
         android:layout_above="@id/verify"
         android:id="@+id/otp_layout"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="45dp">
+
         <EditText
             android:textColor="@color/black"
             android:id="@+id/one"
@@ -20,13 +30,12 @@
             android:importantForAutofill="no"
             android:maxLength="1"
             android:inputType="number"
-            android:padding="15dp"
             tools:ignore="LabelFor"
             android:background="@drawable/edit_text_bg"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="45dp"/>
         <EditText
             android:textColor="@color/black"
             android:id="@+id/two"
@@ -35,13 +44,12 @@
             android:importantForAutofill="no"
             android:maxLength="1"
             android:inputType="number"
-            android:padding="15dp"
             tools:ignore="LabelFor"
             android:background="@drawable/edit_text_bg"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="45dp"/>
 
         <EditText
             android:textColor="@color/black"
@@ -51,13 +59,12 @@
             android:importantForAutofill="no"
             android:maxLength="1"
             android:inputType="number"
-            android:padding="15dp"
             tools:ignore="LabelFor"
             android:background="@drawable/edit_text_bg"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="45dp"/>
         <EditText
             android:textColor="@color/black"
             android:id="@+id/four"
@@ -66,13 +73,12 @@
             android:importantForAutofill="no"
             android:maxLength="1"
             android:inputType="number"
-            android:padding="15dp"
             tools:ignore="LabelFor"
             android:background="@drawable/edit_text_bg"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="45dp"/>
 
     </LinearLayout>
 
@@ -84,6 +90,6 @@
         android:backgroundTint="@color/hint_colour"
         android:text="@string/verify"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="55dp"/>
 
 </RelativeLayout>

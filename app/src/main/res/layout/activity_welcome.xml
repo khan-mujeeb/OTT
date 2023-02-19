@@ -33,7 +33,7 @@
         <TextView
             android:textColor="@color/white"
             android:layout_margin="20dp"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:textAlignment="center"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/save_your_data_watch_offline_on_a_plane_train_or_submarine"
@@ -48,7 +48,7 @@
         android:fontFamily="@font/poppins_medium"
         android:text="sign up"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="55dp"/>
 
     <TextView
         android:layout_marginBottom="10dp"
@@ -56,6 +56,7 @@
         android:layout_alignParentBottom="true"
         android:textColor="@color/white"
         android:fontFamily="@font/poppins_medium"
+        android:textSize="13sp"
         android:text="@string/already_have_an_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -67,6 +68,7 @@
         android:layout_toEndOf="@id/already"
         android:layout_alignParentBottom="true"
         android:textColor="@color/text_red"
+        android:textSize="13sp"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/sign_in"
         android:layout_width="wrap_content"

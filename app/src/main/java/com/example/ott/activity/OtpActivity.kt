@@ -1,5 +1,6 @@
 package com.example.ott.activity
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,6 +19,9 @@ class OtpActivity : AppCompatActivity() {
         setContentView(binding!!.root)
 
         setUpOtpInput()
+        binding!!.verify.setOnClickListener{startActivity(
+            Intent(this,UserNameActivity::class.java)
+        )}
 
 
     }
