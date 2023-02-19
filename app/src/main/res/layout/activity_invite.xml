@@ -15,7 +15,7 @@
         android:padding="15dp"
         android:background="@drawable/edit_text_bg"
         android:textAlignment="center"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:hint="@string/enter_email_to_invite"
         android:layout_width="355dp"
         android:layout_height="45dp"/>
