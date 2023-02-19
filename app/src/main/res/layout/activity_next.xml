@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
         android:textColor="@color/white"
-        android:textSize="16dp"
+        android:textSize="13sp"
         android:layout_marginTop="300dp"
         android:layout_marginStart="49dp"
         android:text="Your Invitation is on the way!"/>
@@ -50,7 +50,7 @@
         android:layout_gravity="center"
         android:backgroundTint="#EE1520"
         android:layout_marginStart="15dp"
-        android:layout_marginEnd="17dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginTop="30dp"
         android:text="next"/>
 
