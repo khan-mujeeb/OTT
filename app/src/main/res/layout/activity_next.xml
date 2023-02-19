@@ -3,25 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <ImageView
-        android:id="@+id/circle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="330dp"
-        android:layout_marginTop="35dp"
-        android:src="@drawable/skeletal" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="295dp"
+            android:layout_marginTop="22dp"
+            android:src="@drawable/skeletal" />
 
-    <ImageView
-        android:id="@+id/cross"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:layout_marginStart="337dp"
-        android:src="@drawable/cross"/>
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/cross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="302dp"
+            android:src="@drawable/cross"/>
+    </RelativeLayout>
 
 
     <TextView
@@ -31,7 +31,7 @@
         android:fontFamily="@font/poppins_medium"
         android:textColor="@color/white"
         android:textSize="16dp"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="300dp"
         android:layout_marginStart="49dp"
         android:text="Your Invitation is on the way!"/>
 
@@ -40,17 +40,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="15dp"
         android:src="@drawable/mail_sent"/>
 
     <Button
         android:id="@+id/next"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="340dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
         android:backgroundTint="#EE1520"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="30dp"
         android:text="next"/>
 
 
