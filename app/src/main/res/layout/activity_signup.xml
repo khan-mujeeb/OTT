@@ -8,7 +8,6 @@
     tools:context=".activity.SignupActivity">
 
     <EditText
-
         android:textColor="@color/black"
         android:layout_above="@id/verify"
         android:id="@+id/email"
@@ -17,6 +16,7 @@
         android:background="@drawable/edit_text_bg"
         android:textAlignment="center"
         android:hint="@string/enter_your_email"
+        android:textSize="15sp"
         android:layout_width="match_parent"
         android:layout_height="45dp"/>
 
