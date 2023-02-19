@@ -33,11 +33,13 @@ class OtpActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                countVal++
-                binding!!.two.requestFocus()
-            }
 
-            override fun afterTextChanged(s: Editable?) {
+                if(s!!.isEmpty()) {
+                    countVal--
+                }else {
+                    countVal++
+                }
+
                 if (countVal==4) {
                     binding!!.verify.backgroundTintList = ColorStateList.valueOf(
                         ContextCompat.getColor(
@@ -46,6 +48,11 @@ class OtpActivity : AppCompatActivity() {
                         )
                     )
                 }
+                binding!!.two.requestFocus()
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
             }
 
         })
@@ -55,11 +62,12 @@ class OtpActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                countVal++
-                binding!!.three.requestFocus()
-            }
+                if(s!!.isEmpty()) {
+                    countVal--
+                }else {
+                    countVal++
+                }
 
-            override fun afterTextChanged(s: Editable?) {
                 if (countVal==4) {
                     binding!!.verify.backgroundTintList = ColorStateList.valueOf(
                         ContextCompat.getColor(
@@ -68,6 +76,11 @@ class OtpActivity : AppCompatActivity() {
                         )
                     )
                 }
+                binding!!.three.requestFocus()
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
             }
 
         })
@@ -77,11 +90,12 @@ class OtpActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                countVal++
-                binding!!.four.requestFocus()
-            }
+                if(s!!.isEmpty()) {
+                    countVal--
+                }else {
+                    countVal++
+                }
 
-            override fun afterTextChanged(s: Editable?) {
                 if (countVal==4) {
                     binding!!.verify.backgroundTintList = ColorStateList.valueOf(
                         ContextCompat.getColor(
@@ -90,6 +104,11 @@ class OtpActivity : AppCompatActivity() {
                         )
                     )
                 }
+                binding!!.four.requestFocus()
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
             }
 
         })
@@ -100,10 +119,12 @@ class OtpActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                countVal++
-            }
+                if(s!!.isEmpty()) {
+                    countVal--
+                }else {
+                    countVal++
+                }
 
-            override fun afterTextChanged(s: Editable?) {
                 if (countVal==4) {
                     binding!!.verify.backgroundTintList = ColorStateList.valueOf(
                         ContextCompat.getColor(
@@ -112,6 +133,10 @@ class OtpActivity : AppCompatActivity() {
                         )
                     )
                 }
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
             }
 
         })

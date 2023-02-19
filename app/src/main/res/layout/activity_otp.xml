@@ -8,6 +8,7 @@
     tools:context=".activity.OtpActivity">
 
     <TextView
+        android:layout_marginEnd="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="13sp"
@@ -17,6 +18,8 @@
         android:text="Check Your Mail"
         android:fontFamily="@font/poppins_medium"/>
     <LinearLayout
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
         android:layout_above="@id/verify"
         android:id="@+id/otp_layout"
         android:orientation="horizontal"
@@ -87,7 +90,7 @@
         android:id="@+id/verify"
         android:layout_marginTop="20dp"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="@color/hint_colour"
+        android:backgroundTint="@color/btn_grey"
         android:text="@string/verify"
         android:layout_width="match_parent"
         android:layout_height="55dp"/>

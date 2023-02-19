@@ -27,7 +27,7 @@
         android:layout_marginTop="20dp"
         android:layout_alignParentBottom="true"
         android:padding="5dp"
-        android:backgroundTint="@color/hint_colour"
+        android:backgroundTint="@color/btn_grey"
         android:text="Verify"
         android:layout_width="match_parent"
         android:layout_height="55dp"/>
