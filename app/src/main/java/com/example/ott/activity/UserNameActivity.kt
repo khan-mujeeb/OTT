@@ -12,7 +12,7 @@ class UserNameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityUserNameBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
-        binding!!.inviteePlus.setOnClickListener {
+        binding!!.invite.setOnClickListener {
             val intent = Intent(this, InviteActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             startActivity(intent)

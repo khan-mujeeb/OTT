@@ -48,6 +48,7 @@
 
 
     <LinearLayout
+        android:id="@id/invite"
         android:layout_width="100dp"
         android:layout_height="121dp"
         android:layout_marginStart="200dp"
